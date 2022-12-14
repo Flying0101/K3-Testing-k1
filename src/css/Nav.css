@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background: rgb(32, 32, 32);
+}
+
+.Nav-section {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+
+
+}
+
+.nav-list-con {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    z-index: 1;
+
+}
+
+.menu-con {
+    position: relative;
+    color: white;
+    list-style-type: none;
+    display: flex;
+
+}
+
+.menu-link {
+    font-size: 2rem;
+    margin-right: 35px;
+    margin-left: 35px;
+
+}
+
+
+
+
+.router-link {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}

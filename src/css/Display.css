@@ -1,0 +1,184 @@
+.Display-section {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.display-inf {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: myanimation 3s infinite;
+
+    animation: myanimation 3s infinite;
+}
+
+
+.timer-clr {
+    position: absolute;
+    height: 80%;
+    width: 30%;
+    left: -40%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@-webkit-keyframes myanimation {
+    0% {
+        background: rgb(17, 17, 17);
+    }
+
+    25% {
+        background: rgb(17, 17, 17);
+
+    }
+
+    50% {
+        background: rgb(37, 77, 87);
+    }
+
+    75% {
+        background: rgb(34, 107, 126);
+    }
+
+    100% {
+        background: rgb(7, 121, 150);
+    }
+}
+
+@keyframes myanimation {
+    0% {
+        background: rgb(17, 17, 17);
+
+
+    }
+
+    25% {
+        background: rgb(17, 17, 17);
+
+    }
+
+    50% {
+        background: rgb(37, 77, 87);
+
+    }
+
+    75% {
+        background: rgb(34, 107, 126);
+    }
+
+    100% {
+        background: rgb(7, 121, 150);
+    }
+}
+
+.timer-header {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10%;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.d-info-container {
+    position: relative;
+    width: 50%;
+    height: 35%;
+}
+
+.d-time {
+    font-size: 2.3rem;
+    color: white;
+    text-align: center;
+}
+
+.d-task {
+    position: relative;
+    max-width: 100%;
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+
+}
+
+
+.timerlist-area {
+    position: absolute;
+    width: 95%;
+    height: 65%;
+    bottom: 0;
+
+}
+
+.scroll-container {
+    width: 100%;
+    height: 100%;
+}
+
+.date-list-container {
+    position: relative;
+    width: 100%;
+    height: 35%;
+    margin-bottom: 40px;
+}
+
+
+.onelist-container {
+    position: relative;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    color: white;
+    background: rgb(17, 17, 17);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.inf-part-container {
+    position: relative;
+    left: 10%;
+}
+
+.t-task-name {
+
+    position: relative;
+    font-size: 1.2rem;
+    top: 25%;
+}
+
+
+.icon-container {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: white;
+}
+
+.play-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.paus-icon {
+    width: 25px;
+    height: 25px;
+    color: red;
+
+}
+
+.ds {
+    display: none;
+}
