@@ -9,6 +9,8 @@ import '../css/FuncOverview.css';
 import ScrollToBottom from 'react-scroll-to-bottom';
 import { FaTimes } from "react-icons/fa";
 
+import OverviewHeader from './OverviewHeader';
+
 
 function FuncOverview() {
     //context data/objects/functions.
@@ -103,7 +105,7 @@ function FuncOverview() {
 
 
             <div className="over-h-container">
-                <p className="over-header">Overview</p>
+                <OverviewHeader />
             </div>
 
             <div className="choose-list-btn">

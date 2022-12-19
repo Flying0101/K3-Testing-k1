@@ -59,7 +59,7 @@ function Display() {
         setCurrTask(null);
         setDisHeader('');
     }
-
+ 
 
     return (
         <div className="Display-section">
@@ -72,11 +72,11 @@ function Display() {
                 </div>
             </div>
 
-            <div className="timerlist-area">
+            <div className="timerlist-area" data-testid="map-list-container">
                 <ScrollToBottom className="scroll-container">
 
 
-                    {tasks.map((data, index) => (
+                    {tasks?.map((data, index) => (
                         <div className="onelist-container">
                             <div className="inf-part-container">
                                 <div className="timer-clr" style={{ background: data.color }}></div>
