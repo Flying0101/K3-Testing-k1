@@ -7,7 +7,7 @@ render(<BtnDecrease />);
 
 const counter = screen.getByTestId("minus-counter");
 const DecrementBtn = screen.getByTestId("Decrement");
- 
+  
 fireEvent.click(DecrementBtn);
 
 expect(counter).toHaveTextContent("-1");

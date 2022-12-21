@@ -5,7 +5,7 @@ import Display from '../Display';
 
 test('check that div parent to map renders', () => {
 
-    render(<Display />)
+    render(<Display />) 
     const displayMapElement = screen.getByTestId('map-list-container');
     expect(displayMapElement).toBeInTheDocument();
 })  

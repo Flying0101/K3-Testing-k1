@@ -9,6 +9,6 @@ const counter = screen.getByTestId("counter");
 const incrementBtn = screen.getByTestId("increment");
  
 fireEvent.click(incrementBtn);
-
+ 
 expect(counter).toHaveTextContent("1");
 });

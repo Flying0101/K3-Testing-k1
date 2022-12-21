@@ -31,13 +31,13 @@ function Nav() {
 
             <div className="nav-list-con">
                 <ul className="menu-con">
-                    <Link to='/' className="router-link" style={{ color: changeColor('/') }} >
+                    <Link to='/' className="router-link" style={{ color: changeColor('/') }} data-testid="main-page" >
                         <li> <FaTasks className="menu-link" /> </li>
                     </Link>
-                    <Link to='/calendar' className="router-link" style={{ color: changeColor('/calendar') }} >
+                    <Link to='/calendar' className="router-link" style={{ color: changeColor('/calendar') }} data-testid="calendar-page">
                         <li> <FaCalendar className="menu-link" /> </li>
                     </Link>
-                    <Link to='/timer' className="router-link" style={{ color: changeColor('/timer') }} >
+                    <Link to='/timer' className="router-link" style={{ color: changeColor('/timer') }} data-testid="timer-page" >
                         <li> <FaHourglassHalf className="menu-link" /> </li>
                     </Link>
                 </ul>

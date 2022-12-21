@@ -77,7 +77,7 @@ function Display() {
 
 
                     {tasks?.map((data, index) => (
-                        <div className="onelist-container">
+                        <div className="onelist-container" data-testid="timer-task">
                             <div className="inf-part-container">
                                 <div className="timer-clr" style={{ background: data.color }}></div>
                                 <p className="t-task-name">{data.title}</p>

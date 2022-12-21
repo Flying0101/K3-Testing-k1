@@ -60,7 +60,7 @@ function FuncOverview() {
     // add project function and reset the value of ref. 
     function addPro() {
 
-        AddProject(ProNameRef.current.value, ProClrRef.current.value);
+        AddProject?.(ProNameRef.current.value, ProClrRef.current.value);
         ProNameRef.current.value = '';
         ProClrRef.current.value = '';
         setShow(false);
@@ -69,10 +69,10 @@ function FuncOverview() {
 
     // add task function and reset value of ref.
     function postTask() {
-        const linkProject = projects.filter(pro => pro.color === currVal)
-        const ProIdForTask = linkProject[0].id;
+        const linkProject = projects?.filter(pro => pro.color === currVal)
+        const ProIdForTask = linkProject?.[0].id;
 
-        AddTask(TaskTitleRef.current.value, currVal, ProIdForTask);
+        AddTask?.(TaskTitleRef.current.value, currVal, ProIdForTask);
         TaskTitleRef.current.value = '';
 
         setShow(false);
@@ -109,8 +109,8 @@ function FuncOverview() {
             </div>
 
             <div className="choose-list-btn">
-                <button className={pro ? "project-list-btn" : "on"} onClick={() => listBtn()}>Project</button>
-                <button className={task ? "on2" : "task-list-btn"} onClick={() => listBtn2()}>Tasks</button>
+                <button className={pro ? "project-list-btn" : "on"} onClick={() => listBtn()} data-testid="pro-page-btn">Project</button>
+                <button className={task ? "on2" : "task-list-btn"} onClick={() => listBtn2()} data-testid="task-page-btn"  >Tasks</button>
             </div>
 
 
@@ -121,7 +121,7 @@ function FuncOverview() {
 
                     <div className="over-list-container">
                         <ScrollToBottom className="overview-scroll">
-                            {projects.map((data, index) => (
+                            {projects?.map((data, index) => (
                                 <div className="over-task-con">
                                     <div className="pro-clr" id="proclr" style={{ background: data.color }}></div>
                                     <div className="over-wraper">
@@ -134,18 +134,18 @@ function FuncOverview() {
                     </div>
 
                     <div>
-                        <button className="add-btn" onClick={() => ModalFunction()}>Add Project</button>
+                        <button className="add-btn" onClick={() => ModalFunction()} data-testid="add-pro-btn">Add Project</button>
 
                     </div>
 
                     <div className={show ? "add-modal" : "diss"}>
                         <p className="modal-header">Add Project</p>
-                        <input type="text" placeholder="Project name.." className="modal-input" ref={ProNameRef} id="input-erase"></input>
+                        <input data-testid="project-input" type="text" placeholder="Project name.." className="modal-input" ref={ProNameRef} id="input-erase"></input>
                         <div className="modal-inf-con">
                             <p className="modal-info" id="input-erase">add a color code</p>
-                            <input className="modal-choose-group" ref={ProClrRef}></input>
+                            <input data-testid="color-input" className="modal-choose-group" ref={ProClrRef} placeholder="color code here..."></input>
                         </div>
-                        <button className="modal-add-btn" onClick={() => addPro()}>ADD</button>
+                        <button className="modal-add-btn" onClick={() => addPro()} data-testid="add-p-btn">ADD</button>
                     </div>
 
 
@@ -160,7 +160,7 @@ function FuncOverview() {
 
                     <div className="over-list-container">
                         <ScrollToBottom className="overview-scroll">
-                            {tasks.map((data) => (
+                            {tasks?.map((data) => (
                                 <div className="over-task-con">
                                     <div className="pro-clr" id="proclr" style={{ background: data.color }}></div>
                                     <div className="over-wraper">
@@ -173,24 +173,25 @@ function FuncOverview() {
                     </div>
 
 
+                     
 
 
                     <div>
-                        <button className="add-btn" onClick={() => ModalFunction()}>Add Task</button>
+                        <button className="add-btn" onClick={() => ModalFunction()} data-testid="add-task-btn">Add Task</button>
 
                     </div>
 
 
                     <div className={show ? "add-modal" : "diss"}>
                         <p className="modal-header">Add task</p>
-                        <input type="text" placeholder="Task name.." className="modal-input" ref={TaskTitleRef}></input>
-                        <select className="modal-select" onChange={(event) => { setCurrentVal(event.target.value) }}>
-                            <option >Choose Projekt</option>
-                            {projects.map((data) => (
-                                <option value={data.color}>{data.name}</option>
+                        <input data-testid="task-input" type="text" placeholder="Task name.." className="modal-input" ref={TaskTitleRef}></input>
+                        <select data-testid="task-select" className="modal-select" onChange={(event) => { setCurrentVal(event.target.value) }}>
+                            <option  >Choose Projekt</option>
+                            {projects?.map((data) => (
+                                <option data-testid="task-options" key={data.color} value={data.color}>{data.name}</option>
                             ))}
                         </select>
-                        <button className="modal-add-btn" onClick={() => postTask()}>ADD</button>
+                        <button className="modal-add-btn" onClick={() => postTask()} data-testid="add-t-btn">ADD</button>
                     </div>
 
                 </div>)}
