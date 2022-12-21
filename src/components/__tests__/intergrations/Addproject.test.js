@@ -4,14 +4,14 @@ import { render, screen, within, fireEvent } from '@testing-library/react';
 import FuncOverview from '../../FuncOverview';
 
 
-// check that click logic works and they render.
-test('check that add project logic works.',() => {
+// check that click works and they render.
+test('check that add project logic works.', () => {
 
 
     render(<FuncOverview />);
 
     // open modal
-    const button =  screen.getByTestId('add-pro-btn');
+    const button = screen.getByTestId('add-pro-btn');
     fireEvent.click(button);
 
 
@@ -34,7 +34,7 @@ test('check that add project logic works.',() => {
     expect(fireEvent.click(AddBtn)).toBe(true);
 
 
-    
+
 
 
 

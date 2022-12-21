@@ -19,40 +19,17 @@ Runs the json server.\
 Server runs on [http://localhost:3004].
 
 
+ 
+### `npm run test`
 
-## npm packages used
-
-
-### React Icons
-
-[https://react-icons.github.io/react-icons/]
-A good place to get good icons, makes it more simple to style your
-application with good icons.
+Runs the 5 jest units tests and 3 integration tests.
 
 
-### Scroll-To-Bottom
+### `npx playwright test`
 
-[https://www.npmjs.com/package/react-scroll-to-bottom]
-
-With this package you can make easy sections that has the ability to
-scroll for infinity, In that way the webpage does not really need to scroll.
-The scrolling will only happen in the specific "div".
-
-
-### Uuid 4v
-
-[https://www.npmjs.com/package/uuidv4]
-facilitates the process of giving your objects/variables an unique ID. 
+Runs the E2E test for the whole application, it tests: 
+1. navigation between page.
+2. create project and create task connected to project.
+3. start and stop timer for one task.
 
 
-### Axios
-
-[https://axios-http.com/docs/intro]
-Axios is a promised based HTTP client for nodejs, it is isomorphic.
-makes you write requests much simplier in code. 
-
-
-## Styling
-
-In this project i choosed to mainly style it with vanilla CSS(external CSS), im more confident styling this way.
-with certain exceptions i also applied inline-css to manipulate the styling with functions/states values.

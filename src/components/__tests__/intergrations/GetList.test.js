@@ -7,7 +7,7 @@ import Display from '../../Display';
 import { BrowserRouter } from 'react-router-dom';
 import Projects from '../../../contexts/ProjectContext';
 
-test('Get list, start and stop time.', async () => {
+test('check if render and check length.', async () => {
 
     render(
         <BrowserRouter>
@@ -15,7 +15,7 @@ test('Get list, start and stop time.', async () => {
                 <Display />
             </Projects>
         </BrowserRouter>)
- 
+
 
     // check that container for map exist
     const ListContainer = screen.getByTestId('map-list-container');
